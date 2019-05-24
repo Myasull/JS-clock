@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+ 
+<head>
+    <title>Zegarek</title>
+    <meta charset="UTF-8">
+</head>
+ 
+<body>
+ 
+    <div id="zegarek"></div>
+ 
+ 
+    <script type="text/javascript">
+		function zegarek()
+		{
+			var czas = new Date();
+			var godzina = czas.toLocaleTimeString();
+			document.getElementById("zegarek").innerHTML = godzina;
+			setTimeout(function(){zegarek()}, 1000);
+		}
+		zegarek();
+    </script>
+     
+</body>
+ 
+</html>
